@@ -26,7 +26,7 @@ class Admin extends Model
 	// unutk simpandata 
 	public function updateData($data)
 	{
-		$builder->this->table($this->table);
+		$builder = $this->table($this->table);
 		if ($builder->save($data)) {
 			return true;
 		} else {
